@@ -1,0 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+
+int main()
+{
+	int a = 0, b = 0, c = 0;
+	for (a; a < 5; a++) {
+		int numb = 0;
+		for (b; b < 5; b++) {
+			for (c; c < 5; c++) {
+				numb = a * 100 + b * 10 + c;
+				printf("%d\n", numb);
+			}
+		}
+	}
+	return 0;
+}
