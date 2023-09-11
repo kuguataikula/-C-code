@@ -1,0 +1,14 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#define W 10000
+int main()
+{
+	int salary=0;
+	int num=0;
+	printf("请输入工资：");
+	scanf("%d", &salary);
+	if (salary < 1*W) {
+		num = salary*(1 + 0.1);
+	}
+	return 0;
+}
