@@ -19,7 +19,7 @@ int main()
 	printf("%f", salary);
 	return 0;
 }
-//方法二
+//方法二（有问题还未解决）
 int main() {
 	double salary = 0;
 	int select = 0,num=0;
