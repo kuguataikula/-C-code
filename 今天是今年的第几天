@@ -1,0 +1,81 @@
+// 1.
+#include<stdio.h>
+void myday(int y, int m, int d);
+int main()
+{
+	int year, month, day;
+	printf("请输入年-月-日：");
+	scanf("%d-%d-%d", &year, &month, &day);
+	myday(year, month, day);
+	return 0;
+}
+void myday(int y, int m, int d)
+{
+	int sum = 0;
+	switch (m)
+	{
+	case 1:sum = 0; break;
+	case 2:sum = 31; break;
+	case 3:sum = 31 + 28; break;
+	case 4:sum = 31 + 28 + 31; break;
+	case 5:sum = 31 + 28 + 31 + 30; break;
+	case 6:sum = 31 + 28 + 31 + 30 + 31; break;
+	case 7:sum = 31 + 28 + 31 + 30 + 31 + 30; break;
+	case 8:sum = 31 + 28 + 31 + 30 + 31 + 30 + 31; break;
+	case 9:sum = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31; break;
+	case 10:sum = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30; break;
+	case 11:sum = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31; break;
+	case 12:sum = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30; break;
+	}
+	sum += d;
+	if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0)
+	{
+		if (m >= 3)
+		{
+			sum += 1;
+		}
+		else
+		{
+			sum += 0;
+		}
+	}
+	printf("%d-%d-%d是%d年的第%d天", y, m, d, y, sum);
+}
+//2.
+#include <stdio.h>
+int main() {
+	int year=0, month=0, day=0;
+	int num=0;
+	printf("请输入年：");
+	scanf("%d",&year);
+	printf("请输入月：");
+	scanf("%d", &month);
+	printf("请输入日：");
+	scanf("%d", &day);
+	switch (month) {
+	case 1:printf("\n"); num += day; break;
+	case 2:printf("\n"); num = num + 31 + day; break;
+	case 3:printf("\n"); num = num + 31 + 27 + day; break;
+	case 4:printf("\n"); num = num + 31 + 27 + 31 + day; break;
+	case 5:printf("\n"); num = num + 31 + 27 + 31 + 30 + day; break;
+	case 6:printf("\n"); num = num + 31 + 27 + 31 + 30 + 31 + day; break;
+	case 7:printf("\n"); num = num + 31 + 27 + 31 + 30 + 31 + 30 + day; break;
+	case 8:printf("\n"); num = num + 31 + 27 + 31 + 30 + 31 + 30 + 31 + day; break;
+	case 9:printf("\n"); num = num + 31 + 27 + 31 + 30 + 31 + 30 + 31 + 31 + day; break;
+	case 10:printf("\n"); num = num + 31 + 27 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + day; break;
+	case 11:printf("\n"); num = num + 31 + 27 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + day; break;
+	case 12:printf("\n"); num = num + 31 + 27 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + day; break;
+	}
+	if (year % 400 == 0||(year%100!=0&&year%4)) {
+		if (month > 2) {
+			num += 1;
+			printf("%d", num);
+		}
+		else {
+			printf("%d", num);
+		}
+	}
+	else {
+		printf("%d", num);
+	}
+
