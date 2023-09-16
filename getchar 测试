@@ -1,0 +1,32 @@
+int main() {
+	char password[100] = "\0";
+	printf("请输入密码：");
+	scanf("%s", password);
+	getchar();
+	printf("是否确认密码：Y/N");
+	int ch;
+	ch=getchar();
+	if ('Y' || 'y' == ch) {
+		printf("yes!");
+	}else
+	{
+		printf("no!");
+	}
+	return 0;
+}
+
+int main() {
+	char ch = '\0';
+	while (1){
+		ch = getchar();
+		if (ch >= '0' && ch<='9') {
+			putchar(ch);
+		}
+		else if ('n' == ch || 'N' == ch) {
+			break;
+		}
+
+	}
+
+	return 0;
+}
