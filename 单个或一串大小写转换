@@ -1,11 +1,11 @@
 int main() {
-	int num=0;
-	scanf("%d", &num);
-	while (num!=0) {
-		
-		printf("%d", num%10);
-		num = num / 10;
+
+	int ch = 0;
+	while ((ch = getchar()) != EOF) {
+		//if('\n' != ch) 一串字符
+		printf("%c", ch+32);
+		putchar(ch + 32);
+		getchar();//单个大小写转换
 	}
-	
 	return 0;
 }
