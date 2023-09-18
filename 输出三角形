@@ -1,0 +1,14 @@
+int main() {
+	char n = 0;
+	scanf("%c", &n);
+	for (int i = 0; i <= 5; i++) {
+		for (int j = 0; j < 5 - i;j++) {
+			printf(" ");
+		}
+		for (int k = 0; k <= i; k++) {
+			printf("%c ", n);
+		}
+		printf("\n");
+	}
+	return 0;
+}
