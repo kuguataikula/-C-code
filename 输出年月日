@@ -1,0 +1,9 @@
+int main() {
+	int y = 0, m = 0, d = 0;
+	scanf("%4d%2d%2d", &y, &m, &d);
+	printf("year=%d\n", y);
+	printf("mooth=%02d\n", m);
+	printf("day=%02d", d);
+
+	return 0;
+}
