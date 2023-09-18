@@ -19,18 +19,4 @@ int main()
 	printf("%f", salary);
 	return 0;
 }
-//方法二（有问题还未解决）
-int main() {
-	double salary = 0;
-	int select = 0,num=0;
-	printf("请输入工资");
-	scanf("%d", &num);
-	select = num % 10000;
-	switch (select) {
-	case 0:salary = num * (1 + 0.1); break;
-	case 1:salary = 10000 * (1 + 0.1) + (num - 10000) * (1 + 0.075); break;
-	}
-	printf("%.2f", salary);
-	return 0;
-}
 
