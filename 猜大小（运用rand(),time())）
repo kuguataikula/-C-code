@@ -1,0 +1,56 @@
+#include <time.h>
+void meau() {
+	printf("#####################\n");
+	printf("######1.play ########\n");
+	printf("######0.exit ########\n");
+	printf("#####################\n");
+}
+void game() {
+	RAND_MAX;
+	int i = rand()%10;
+	int ret = 0;	
+	while (1) {
+		printf("请输入0-9:  ");
+		scanf("%d", &ret);
+		if (ret > i)
+		{
+			printf("猜大了!\n");
+		}
+		else if (ret < i) {
+			printf("猜小了！\n");
+		}
+		else if (i > 9) {
+			printf("请输入0-9:  ");
+		}
+		else
+		{
+			printf("恭喜你猜对了！");
+			Sleep(2000);
+			break;
+		}
+	}
+	system("cls");
+}
+int main() {
+	srand((unsigned int)time(NULL));
+	int input = 0;
+	do
+	{
+		//system("cls");
+		meau();
+		scanf("%d", &input);
+		switch (input) {
+		case 1:
+			printf("继续游戏！\n");
+			game();
+			break;
+		case 0:
+			printf("退出游戏！\n"); 
+			break;
+		default:
+			printf("选择错误，请重新选择！");
+			break;
+		}
+	} while (1 == input);
+	return 0;
+}
