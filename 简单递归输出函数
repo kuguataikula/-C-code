@@ -1,0 +1,14 @@
+#include <stdio.h>
+void print(unsigned int num);
+int main() {
+	unsigned int num;
+	scanf("%u", &num);
+	print(num);
+	return 0;
+}
+void print(unsigned int num) {
+	if (num > 9) {
+		print(num / 10);
+	}
+	printf("%d", num % 10);
+}
