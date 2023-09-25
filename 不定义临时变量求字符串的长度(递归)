@@ -1,0 +1,15 @@
+#include <stdio.h>
+int slen(char* arr);
+int main() {
+	char arr[] = { "abc"};
+	int len = slen(arr);
+	printf("%d", len);
+}
+int slen(char* arr) {
+	if (*arr != '\0') {
+		return 1 + slen(arr + 1);
+	}
+	else {
+		return 0;
+	}
+}
