@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void tans(char* arr) {
+	char temp = *arr;
+	int len = strlen(arr)-1;
+	*arr = *(arr + len);
+	*(arr + len) = '\0';
+	if (strlen(arr + 1) >= 2) {
+		tans(arr + 1);
+	}
+	*(arr + len) = temp;
+}
+int main() {
+	char arr[] = "fedcba";
+	tans(arr);
+	printf("%s", arr);
+	return 0;
+}
