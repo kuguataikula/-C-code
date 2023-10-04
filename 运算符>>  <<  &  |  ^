@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main() {
+	int a = 5;
+	int b = a >> 1;
+	printf("………………………………\n");
+	printf("a >> = %d\n", b);
+	printf("………………………………\n");
+	b = a << 1;
+	printf("a << = %d\n", b);
+	printf("………………………………\n");
+
+	int m = -7;
+	int n = m >> 1;
+	printf("m >> = %d\n", n);
+	printf("………………………………\n");
+	n = m << 1;
+	printf("m >> = %d\n", n);
+	printf("………………………………\n");
+
+	int x = 4;
+	int y = 3;
+	int z = x & y;
+	printf("x & y = %d\n", z);
+	printf("………………………………\n");
+	z = x | y;
+	printf("x | y = %d\n", z);
+	printf("………………………………\n");
+	z = x ^ y;
+	printf("x ^ y = %d\n", z);
+	printf("………………………………\n");
+
+	int u = -4;
+	int v = -3;
+	int w = u & v;
+	printf("u & v = %d\n", w);
+	printf("………………………………\n");
+	w = u | v;
+	printf("u | v = %d\n", w);
+	printf("………………………………\n");
+	w = u ^ v;
+	printf("u ^ v = %d\n", w);
+	printf("………………………………\n");
+	return 0;
+}
