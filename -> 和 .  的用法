@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+struct stu
+{
+	char name[10];
+	int age;
+	int score;
+};
+void set_stu(struct stu* ss) {
+	strcpy((*ss).name, "zhangsan");
+	(*ss).age = 20;
+	(*ss).score = 100;
+	/*strcpy(ss->name, "zhangsan");
+	ss->age = 20;
+	ss->score = 100;*/
+}
+void put_stu(struct stu* ss) {
+	printf("%s\n%d\n%d", ss->name, ss->age, ss->score);
+}
+
+int main() {
+	struct stu s = { 0 };
+	set_stu(&s);
+	put_stu(&s);
+	return 0;
+}
