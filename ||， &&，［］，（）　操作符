@@ -1,0 +1,36 @@
+#include <stdio.h>
+int add(int i ,int j) {
+	return i + j;
+}
+int main() {
+	int i = 0, a = 0, b = 2, c = 3, d = 4;
+	printf("a = %d, b = %d, c = %d, d = %d\n", a, b, c, d);
+	i = a++ && ++b && d++;
+	printf("a = 0, i = %d\n", i);
+	printf("a = %d, b = %d, c = %d, d = %d\n", a, b, c, d);
+	printf("………………………………\n");
+	a = 1;
+	i = a++ && ++b && d++;
+	printf("a = 0, i = %d\n", i);
+	printf("a = %d, b = %d, c = %d, d = %d\n", a, b, c, d);
+	printf("………………………………\n");
+	a = 0, b = 2, c = 3, d = 4;
+	i = a++ || ++b || d++;
+	printf("a = 0, i = %d\n", i);
+	printf("a = %d, b = %d, c = %d, d = %d\n", a, b, c, d);
+	printf("………………………………\n");
+	a = 1, b = 2, c = 3, d = 4;
+	i = a++ || ++b || d++;
+	printf("a = 0, i = %d\n", i);
+	printf("a = %d, b = %d, c = %d, d = %d\n", a, b, c, d);
+	printf("………………………………\n");
+	return 0;
+
+	int arr[10] = { 0 };
+	arr[7] = 7[arr];
+	//[] 下标调用操作符 7 ,arr 操作数
+
+	i = add(a,b);
+	//() 函数调用操作符add, a, b 函数调用操作数
+
+}
