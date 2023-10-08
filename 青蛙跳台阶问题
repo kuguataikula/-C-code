@@ -1,0 +1,16 @@
+#include <stdio.h>
+int rib(int n) {
+	if (n <= 2) {
+		return n;
+	}
+	else {
+		return rib(n - 1) + rib(n - 2);
+	}
+}
+int main() {
+	int n = 0;
+	scanf("%d", &n);
+	int c = rib(n);
+	printf("%d", c);
+	return 0;
+}
