@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+	int sconds = 0;
+	int h = 0;
+	int m = 0;
+	int s = 0;
+	scanf("%d", &sconds);
+	h = sconds / (60*60);
+	//m = (sconds % (60 * 60)) / 60;
+	m = sconds / 60 % 60;
+	s = sconds % 60;
+	printf("%d %d %d", h, m, s);
+	return 0;
+}
