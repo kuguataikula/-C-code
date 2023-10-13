@@ -1,0 +1,16 @@
+#include <stdio.h>
+int cont_len(char* p) {
+	char* p1 = p;
+	while (*p != '\0') {
+		p++;
+	}
+	return p - p1;
+}
+int main() {
+	char arr[] = "abcdef";
+	char* p = arr;
+	//int c = cont_len(p);
+	int c = cont_len(arr);
+	printf("%d", c);
+	return 0;
+}
